@@ -150,7 +150,7 @@ Results: `results/summary.md`, `results/summary.csv`, `results/plots/\*.png`, ra
 
 One scenario only (quick check, \~1 min): `./run\_all.sh --scenarios crash --duration 20`
 
-### 4b. Manual demo (good for the viva) - needs 2 terminals, both in the project folder
+### 4b. Manual demo 
 
 Terminal 1 - controller:
 
