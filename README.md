@@ -232,12 +232,3 @@ client-visible **disruption** (event -> last request that needed a retry).
 |Leftovers after a crashed run|`sudo mn -c`|
 |Results too light/heavy for your VM|change `--threads`, `--think-ms`, `--work-ms` of `run\_experiments.py`|
 
-## 8\. Known limitations (be honest about these in the viva)
-
-* One switch (the LB decision is made at the edge); a multi-switch topology would need path selection too.
-* Flows are per-connection; a connection already established on a server that then dies is lost
-and the *client* retries (the SDN controller cannot migrate a TCP connection).
-* Heartbeat detection takes up to `LB\_HB\_TIMEOUT` (2 s) + one monitor tick; link failures are detected
-immediately via port-status.
-* The score weights and thresholds are hand-tuned for this topology, not learned.
-
